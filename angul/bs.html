@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Angular</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+       var app=angular.module("myApp",[]);
+        app.controller("myctrl",function($scope){
+        $scope.group={};
+        $scope.userData={};
+        $scope.id=1;
+
+        $scope.submit=function(group){
+          $scope.userData[$scope.id] = group;
+          $scope.group = {};
+          $scope.id = $scope.id+1;
+        };
+        $scope.delete=function(k){
+          delete $scope.userData[k]
+        }
+
+      });
+    </script>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="myctrl">
+      <h1 style="text-align: center;">Create/Update/Delete</h1>
+      <div class="container">
+        <div class="col-md-12">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="text">User Name:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="text" placeholder="Enter User Name" name="Name" ng-model="group.x">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="number">Employee ID:</label>
+              <div class="col-sm-10">          
+                <input type="number" class="form-control" id="number" placeholder="Enter ID" name="id" ng-model="group.y">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="number">Phone Number:</label>
+              <div class="col-sm-10">          
+                <input type="number" class="form-control" id="number" placeholder="Enter Phone Number" name="Num" ng-model="group.z">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="number">Address:</label>
+              <div class="col-sm-10">          
+                <input type="text" class="form-control" id="text" placeholder="Enter Address" name="text" ng-model="group.a">
+              </div>
+            </div>
+              <button class="btn btn-success" ng-click="submit(group)" > Submit </button>
+              
+            </div>
+          </form>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+              <th>User Name</th>
+              <th>Emplyee ID</th>
+              <th>Phone Number</th>
+              <th>Address</th>
+              <th>Action</th>
+            </tr>
+              <tr ng-repeat ="(k,b) in userData">
+                <td ng-bind="b.x"></td>
+                <td ng-bind="b.y"></td>
+                <td ng-bind="b.z"></td>
+                <td ng-bind="b.a"></td>
+                <td>
+                  <button class="btn btn-danger" ng-click="submit(k)"> Delete</button>
+                </td>
+
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

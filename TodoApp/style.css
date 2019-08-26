@@ -1,0 +1,16 @@
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}
+
+.remove-todo{
+	position: absolute;
+  right: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;	
+}
+
+p{
+	border-bottom: 1px solid #aaa;
+	margin-bottom: 40px;
+}

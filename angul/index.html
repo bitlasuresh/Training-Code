@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>angularjs</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script>
+		var app=angular.module("myApp",[]);
+		app.controller("myctrl",function($scope){
+			$scope.name = "7"
+			$scope.name=$scope.name+"6";
+			$scope.func=function(){
+				$scope.name=$scope.name+"Hello";
+			}
+			// $scope.func=function(Babu){
+			// 	$scope.show=Babu+"Hello.";
+			// }
+
+			$scope.add=function(x,y){
+				if(angular.isDefined(x) && angular.isDefined(y)){
+					$scope.z=parseInt(x)+parseInt(y);
+				}
+			}
+		});
+
+
+	</script>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="myctrl">
+	<label>Name</label>
+	<input type="text" name="text" ng-change="func(Babu)" ng-model="name">
+
+	My Name Is:{{name}}
+	hi:<label ng-bind="name"></label>
+	Different:{{show}}
+	<label>X</label>
+	<input type="text" name="text" ng-model="x">
+	<label>Y</label>
+	<input type="text" name="text" ng-model="y">
+
+	<button ng-click="add(x,y)"> Summit</button>
+	result:{{z}}
+	<div ng-if="x<=5">Hello</div>
+	<div ng-if="x>5">Hi</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body{
+	background-color: yellow;
+	width: 990px;
+	margin: 0 auto;
+}
+
+.first, .second, .third, .fourth {
+	width: 23%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 1%;
+    box-shadow: 5px 10px black;
+}
+
+.first{
+	background-color: blue;
+	float: left;	
+	border-radius:20px;
+	border: 2px solid red;
+}
+.second{
+	background-color: red;
+	float: left;
+	border-radius:20px;
+	border: 2px solid green;
+}
+
+.third{
+	background-color: orange;
+	float: left;
+	border-radius:20px;
+	border: 2px solid red;
+
+}
+.fourth{
+	background-color: yellow;
+	float: left;	
+	border-radius:20px;
+	border: 2px solid red;
+}
+/*@media only screen and (min-width: 320px) and (max-width: 479px){
+	.first,.second,.third,.forurth{
+		width: 50px;
+		margin-bottom: 20%
+	}
+}
+@media only screen and (min-width: 441px) and (max-width: 540){
+	.first,.second,.third,.forurth{
+		width: 20px;
+	}
+}
+@media only screen and (min-width: 650px) and (max-width: 711px){
+	.first,.second,.third,.forurth{
+		width: 70px;
+	}
+}
+@media only screen and (min-width: 991px) {	
+	.first,.second,.third,.forurth{
+		width: 80px;
+	}
+
+}*/
+
