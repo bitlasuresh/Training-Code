@@ -1,0 +1,101 @@
+
+Program1: 
+    I/P: name = "Jane"
+          age = 17
+   O/P: "Jane is 17 years old"
+
+Program2: 
+   Program to Accept a String and display its alternate characters
+ I/P: Bitlasoft Pvt Ltd.
+ O/p: BtaotPtLd
+
+Program3: 
+  Accept 2 strings and display how many times each character from 1st string occurs in 2nd string.
+ I/P: Bitlasoft , Bitlantic
+ O/P:
+             B - 1
+      i - 2
+      t - 2
+      l - 1
+      a - 1
+
+Program4:
+    I/P : "Ruby Programming Language"
+    O/P : "rUBY pROGRAMMING lANGUAGE"
+
+Program5: 
+   print ASCII code for website = "zetcode.com"
+    O/p:
+        z has ASCII code 122
+e has ASCII code 101
+t has ASCII code 116
+c has ASCII code 99
+o has ASCII code 111
+d has ASCII code 100
+e has ASCII code 101
+. has ASCII code 46
+c has ASCII code 99
+o has ASCII code 111
+m has ASCII code 109
+
+Program6:
+Convert below string into the given output.
+I/P: "a@1-b@2-c@3"
+O/P: [["a", 1], ["b", 2], ["c", 3]]
+
+Program7:
+Convert array into Hash.
+I/P: [["a", 1], ["b", 2], ["c", 3]]
+O/P: {:a => 1, :b => 2, :c => 3}
+
+Program8:
+Covert Hash to array.
+I/P: {:a => 1, :b => 2, :c => 3}
+O/P: [["a", 1], ["b", 2], ["c", 3]]
+
+Program9:
+Convert Array to string.
+I/P: [["a", 1], ["b", 2], ["c", 3]]
+O/P: "a@1-b@2-c@3"
+
+Program10:
+Convert String to array.
+I/P: "(a*b-c*d)&(e*f-g*h)"
+O/P: [{:a => 'b', :c => 'd'}, {:e => 'f', :g => 'h'}]
+
+
+
+
+Program12: 
+Generate an array, string, hash in the following ways.
+Array: [['a', 1], ['b', 2], ............ ['z', 26]]
+String: "a@1-b@2-c@3-d@4.........z@26"
+Hash: {:a => 1, :b => 2, :c => 3, ....... :z => 26}
+
+
+Program13: 
+   Take one Time class. (EG: Time.now)
+    From the Time convert that into the following ways.
+    "25-01-2012 11:30 PM"
+    "25-01-2012 23:30" 
+    "2012-01-25 11:30 PM" 
+    "25/01/2012 11:30 PM" 
+    "25/01/12 11:30 PM" 
+    "25 Jan 12 11:30 PM" 
+    "25 Jan 2012 23:30" 
+    "Jan 25 12 23:30"
+
+Program14: 
+ Convert the string "bitla software" into the below ways:
+"Bitla Software"
+"BitlaSoftware"
+"BITLA SOFTWARE"
+"bITLA sOFTWARE"/
+   
+Program15: 
+  Take an Input array. And if I pass 1 it should print Jan, 2 it should print Feb, 12 it should print Dec.
+ 
+Program16: 
+Replace the following array:
+I/P: a = ['a', 'b', 'c', 'd', 'e']
+O/P: a = [1, 2, 3, 4, 5]

@@ -1,0 +1,26 @@
+<h1> Add Players Names </h1>
+<%= form_with(model: @player, local: true) do |form| %>
+  <p>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+  	<%= form.label :age  %>
+  	<%= form.text_field :age %>
+  </p>	
+  <p>
+  	<%= form.label :height %>
+  	<%= form.text_field :height %> 	
+  </p>
+  <p>
+  	<%= form.label :role %>
+  	<%= form.text_field :role %>
+  </p>
+	<p>
+		<%= form.submit %>
+	</p>
+ </p> 
+ <%end %>
+
+
+

@@ -1,0 +1,2 @@
+class Indiansteam < ApplicationRecord
+end

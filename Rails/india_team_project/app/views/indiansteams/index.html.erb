@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Indiansteams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @indiansteams.each do |indiansteam| %>
+      <tr>
+        <td><%= link_to 'Show', indiansteam %></td>
+        <td><%= link_to 'Edit', edit_indiansteam_path(indiansteam) %></td>
+        <td><%= link_to 'Destroy', indiansteam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Indiansteam', new_indiansteam_path %>

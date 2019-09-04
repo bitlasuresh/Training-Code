@@ -1,0 +1,16 @@
+<h1>List Of Countrys Names</h1>
+<table border="2">
+  <tr>
+    <th>SNo</th>
+    <th>Name Of The Country </th>
+  </tr>
+  <% @players.each_with_index do |country, i| %>
+    <tr>
+      <td><%= i+1 %></td>
+      <td><%= link_to country.name, players_path%></td>
+    </tr> 
+  <% end %>
+</table>
+<%= link_to "Add Countrys", new_welcomeindium_path %>
+<%= link_to "Add Players", new_player_path %>
+
