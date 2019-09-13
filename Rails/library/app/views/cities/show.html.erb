@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @city.name %>
+</p>
+
+<%= link_to 'Edit', edit_city_path(@city), class: "btn btn-info"%>
+<br>
+<%= link_to 'Back', cities_path, class: "btn btn-info"%>

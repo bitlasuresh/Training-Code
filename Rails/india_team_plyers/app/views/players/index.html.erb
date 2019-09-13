@@ -1,5 +1,28 @@
 <h1>List Of Palyers</h1>
 
-
+<table border = 1 align="center">
+  <tr>
+    <th>S.No.</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Height</th>
+    <th>Role</th>
+    <th>Action</th>
+  </tr>
+ 
+  <% @players.each_with_index do |player, i| %>
+    <tr>
+      <td><%= i+1 %></td>
+      <td><%= player.name %></td>
+      <td><%= player.age %></td>
+      <td><%= player.height %></td>
+      <td><%= player.role %></td>
+      <td><%#= link_to 'edit', edit_team_path(player) %>
+      	  <%#= link_to 'delete', team_path(player),
+      	  	  method: :delete, 
+      	  	  data: {confirm: 'Are you sure?'}	%></td>
+    </tr>
+  <% end %>
+</table>
 
 <%= link_to "Back", welcomeindia_path%>

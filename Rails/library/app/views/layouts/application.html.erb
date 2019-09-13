@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Library Books Stores </a>
+        </div>
+          <ul class="nav navbar-nav">
+              <li><%= link_to 'Home',main_pages_path %></li>
+              <li><%= link_to 'Library Cities',cities_path %></li>
+              <li><%= link_to 'Library Areas',areas_path %></li>
+              <li><%= link_to 'Library Stores', library_stores_path %></li>
+              <li><%= link_to 'Library Books', books_path %></li>
+          </ul>
+          <ul class="nav navbar-nav">
+              <li><%= link_to 'Login', logins_path %></li>
+          </ul>
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+
+</html>

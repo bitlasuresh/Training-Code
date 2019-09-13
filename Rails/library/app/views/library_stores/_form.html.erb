@@ -1,0 +1,27 @@
+<%= form_with(model: library_store, local: true) do |form| %>
+  <% if library_store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(library_store.errors.count, "error") %> prohibited this library_store from being saved:</h2>
+      <ul>
+        <% library_store.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="table-bordered">
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :author %>
+      <%= form.text_field :author %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit class: "btn btn-info" %>
+    </div>
+   </div> 
+<% end %>

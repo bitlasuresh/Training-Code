@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @library_store.name %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @library_store.author %>
+</p>
+
+<%= link_to 'Edit', edit_library_store_path(@library_store), class: "btn btn-info" %> |
+<%= link_to 'Back', library_stores_path, class: "btn btn-info" %>

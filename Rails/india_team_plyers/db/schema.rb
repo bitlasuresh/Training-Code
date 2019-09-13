@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(version: 2019_09_03_081747) do
   create_table "players", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "age"
+    t.string "height"
+    t.string "role"
   end
 
 end

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style="text-align: center"> List Of The Librarys Cities</h1>
+<div class="container">
+  <table class="table table-bordered"> 
+    <thead class="">
+      <tr>
+        <th>City Name</th>
+        <th>Consern Name</th>
+        <th colspan="3">Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @cities.each do |city| %>
+        <tr>
+          <td><%= city.name %></td>
+          <td></td>
+          <td><%= link_to 'Show', areas_path, class: "btn btn-info"%></td>  
+          <td><%= link_to 'Edit', edit_city_path(city),class: "btn btn-warning" %></td>
+          <td><%= link_to 'Destroy', city,class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-success">
+  <%= link_to 'New City', new_city_path %> 
+  </button>
+  <button type="button" class="btn btn-success">
+  <%= link_to 'New Area', new_area_path %>
+  </button>
+  <button type="button" class="btn btn-success">
+  <%= link_to 'New Library Store', new_library_store_path %>
+  </button>
+</div>

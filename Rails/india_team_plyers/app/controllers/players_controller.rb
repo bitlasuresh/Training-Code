@@ -1,10 +1,45 @@
 class PlayersController < ApplicationController
-	def new
-		@player = Player.new
-	end
+	 def index
+      @players = Player.all
 
-	def create
-  		@player = Players.new(player_params)
+   end
+    def new
+		  @player = Player.new
+	   end
+
+	   def create
+  		@player = Player.new(player_params)
   		@player.save
+  		redirect_to root_path
   	end
+    def show
+         @country = Country.find(params[:id])
+         @country = Country.where(id: @country).first
+         @players = Player.where(country_id: @country)
+    end
+    def edit
+    @player = Player.find(params[:id])
+  end
+
+  def update
+    @player = Player.find(params[:id])
+    if @player.update(player_params)
+      redirect_to @player
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @player = Player.find(params[:id])
+    @player.destroy
+   
+    redirect_to root_path
+  end
+
+  	private
+  		def player_params
+			params.require(:player).permit(:name,:age,:height,:role)
+  			
+  		end
 end

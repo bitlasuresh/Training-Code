@@ -1,7 +1,12 @@
 class WelcomeindiaController < ApplicationController
-	def index
+	def new
+      
+    end
+
+  def index
 		@players = Country.all
 	end	
+  
   	def create
   		@country = Country.new(country_params)
   		@country.save
@@ -10,12 +15,8 @@ class WelcomeindiaController < ApplicationController
   	def show
    		@country = Country.find(params[:id])
   	end
-    def create
-      @player = Player.new(player_params)
-      @player.save
-    end
 
-  	private
+   	private
   		def country_params
 			params.require(:country).permit(:name)
   			
