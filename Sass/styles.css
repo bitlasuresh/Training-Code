@@ -1,0 +1,64 @@
+body {
+  color: orange;
+  background: gold;
+  font-family: "Open Sans", Helvetica, Sans-Serif;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: orange;
+}
+
+header {
+  color: orange;
+}
+header article {
+  border: 10px solid orange;
+  width: 60%;
+  padding: 20px;
+  margin: auto;
+}
+header aside {
+  border: 1px solid orange;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+}
+
+div {
+  padding: 20px;
+  margin: 20px;
+}
+
+.one {
+  background: red;
+}
+
+.two {
+  background: yellow;
+}
+
+.three {
+  background: #ff8000;
+}
+
+.four {
+  background: #ffa600;
+}
+
+.five {
+  background: #ff5900;
+}
+
+/*# sourceMappingURL=styles.css.map */

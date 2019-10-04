@@ -7,52 +7,66 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>	
-  	<style>
-  		.container{
-  			background-image: url('book.jpg');
-  			background: cover;
-  		}
+  	<style type="text/css">
   		body{
-  			font: 20px Montserrat, sans-serif;
-  			color: white;
+  			background-color: grey;
   		}
-
   	</style>
 </head>
 <body>
-	<form class="myForm" onsubmit="return validateForm ()" method="post">	
+	<form onsubmit="return validateForm(this)" method="post" class="form-inline myForm">	
 		<div class="container">
-			<h1>Login Form</h1>
+			<h1 class="text-center">Login Form</h1>
 			<form class="horizontal">
 				<div class="form-group">
-					<label for="email">Email Address</label>
-					<input type="email" name="email" class="form-control" placeholder="Enter Email">		
+					<label for="user">User Id :</label>
+					<input type="text" name="user" placeholder="Enter User Id" class="form-control">		
 				</div>
 				<div class="form-group">
-					<label for="password">Password</label>
-					<input type="password" name="password" class="form-control" placeholder="Enater Password">		
+					<label for="password">Password :</label>
+					<input type="password" name="password" placeholder="Enater Password" class="form-control">		
 				</div>
 				<div class="checkbox">
 					<label><input type="checkbox" name="checkbox">Remember Me</label>
 				</div>
-				<button type="submit" class="btn btn-success">Submit</button>
+				<button type="submit" value="Login" class="btn btn-success">Submit</button>
+				<button type="reset" class="btn btn-info">Reset Password</button>
 			</form>
 		</div>
 	</form>	
 	<script>
-		function validateForm(){
-			var email = document.forms[0]["email"].value;
-			var password = document.forms[0]["password"].value;
-			if (email =="") {
-				alert("Email Field Is Required")
-				return false;
-			}
+		function validateForm(val){
 
-			if (password =="") {
-				alert("Password Field Is Required")
+			if(val.user.value == "suresh1" && val.password.value == "suresh"){
+				return true;
+			}
+			else {
+				alert("Please Eneter Correct Login Details")
 				return false;
 			}
 		}
 	</script>
+	<!--<div>
+		<h1 class="text-center"> Login Page </h1>
+	</div>
+	<form name="login">
+		<div class="container-fluid">
+			<div class="form-group">
+				<label>User Id</label>
+				<input type="text"  class="form-control" name="userid" placeholder="Enter UserId">				
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" name="password" class="form-control" placeholder="Enter Password">				
+			</div>
+			<div>
+				<button type="button" onclick="check(this.form)" value="Login" class="btn btn-info"> Login </button>
+			</div>
+			<br>
+			<div class="text-right" >
+				<input type="reset" value="Reset" class="btn btn-warning" />
+			</div>		
+		</div>
+	</form>-->	
 </body>
 </html>

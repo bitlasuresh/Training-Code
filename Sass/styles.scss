@@ -1,0 +1,112 @@
+$primary-color: orange;
+$secondary-color: gold;
+$font-stack: 'Open Sans', Helvetica, Sans-Serif;
+$border-thick: 10px;
+$border-bright: orange;
+$border-style: solid;
+$article-width: 60%;
+$article-padding: 20px;
+$article-margin: auto;
+
+@import "colors";
+
+body{
+  color: $primary-color;
+  background: $secondary-color;
+  font-family: $font-stack;
+}
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { 
+    display: inline-block; 
+    }
+
+  a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: orange;
+  }
+}
+header {
+    $header-color: orange !global;
+    color: $header-color;
+article {
+    border: $border-thick $border-style $border-bright;
+    width: $article-width;
+    padding:$article-padding;
+    margin: $article-margin;
+}
+
+@mixin border-radius($radius) {
+
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	-ms-border-radius:8px;
+	border-radius: 8px;
+}
+
+aside {
+	border: 1px solid orange;
+	@include border-radius(7px);
+}
+}
+%alert {
+  padding: 10px;
+  background-color: silver;
+  color: white;
+}
+
+%info {
+  @extend %alert;
+  background-color: dodgerblue;
+}
+
+%success {
+  @extend %alert;
+  background-color: green;
+}
+
+%error {
+  @extend %alert;
+  background-color: red;
+}
+
+%warning {
+  @extend %alert;
+  background-color: orange;
+}
+%important {
+	@extend %alert;
+  font-weight: bold;
+  font-size: larger;
+}
+
+%important-error {
+  @extend %important;
+  background-color: red;
+}
+div {
+    padding: 20px;
+    margin: 20px;
+}
+.one {
+    background: red;
+    }
+.two {
+    background: yellow;
+}
+.three {
+    background: mix(red, yellow);
+    }
+.four {
+    background: mix(red, yellow, 35%);
+}
+.five {
+    background: mix(red, yellow, 65%);
+}
