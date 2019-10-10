@@ -1,0 +1,41 @@
+body{
+	overflow-x: hidden;
+	padding: 10px;
+
+}
+.modal-content {
+    border-radius: 15px;
+    width: 70%;
+    margin: 75px;
+    padding: 15px;
+}
+.modal-header {
+    padding: 7px;
+    border-bottom: 5px solid #58525259;
+    text-align: center;
+    color: skyblue;
+    background: lightslategray;
+    border-radius: 15px;
+}
+body::selection{
+	color: lightgreen;
+}
+.popover {
+    border: 5px solid greenyellow;
+  }
+  /* Popover Header */
+  .popover-title {
+    background-color: coral!important;
+    color: #FFFFFF !important;
+    padding: 25px;
+    font-size: 28px;
+    text-align:center;
+  }
+  .popover-content {
+    background-color: coral;
+    color: #FFFFFF;
+    padding: 25px;
+  }
+  .arrow {
+    border-right-color: blue !important;
+  }
